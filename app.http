@@ -1,0 +1,30 @@
+GET http://localhost:3000/todos/
+###
+GET http://localhost:3000/todos/5/
+
+###
+GET http://localhost:3000/agenda/?date=2021-15-22
+
+###
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 6,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-13-22"
+}
+
+###
+PUT http://localhost:3000/todos/5/
+Content-Type: application/json
+
+{
+  "dueDate": "2021-18-12"
+}
+
+###
+DELETE http://localhost:3000/todos/5/ 
